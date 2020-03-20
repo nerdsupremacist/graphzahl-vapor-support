@@ -47,29 +47,20 @@
         }
       },
       {
-        "package": "fluent",
-        "repositoryURL": "https://github.com/vapor/fluent.git",
-        "state": {
-          "branch": null,
-          "revision": "3eafdfe53c7d945c87769ec443e8ea5528ab9e32",
-          "version": "4.0.0-rc.1"
-        }
-      },
-      {
-        "package": "fluent-kit",
-        "repositoryURL": "https://github.com/vapor/fluent-kit.git",
-        "state": {
-          "branch": null,
-          "revision": "d444242d21e88eb04c57df89236839ad58fecad5",
-          "version": "1.0.0-rc.1.11"
-        }
-      },
-      {
         "package": "GraphQL",
         "repositoryURL": "https://github.com/nerdsupremacist/GraphQL.git",
         "state": {
           "branch": "master",
           "revision": "d4213633506dfc766a7d8f343772052b1ecf847d",
+          "version": null
+        }
+      },
+      {
+        "package": "GraphZahl",
+        "repositoryURL": "https://github.com/nerdsupremacist/GraphZahl.git",
+        "state": {
+          "branch": "master",
+          "revision": "86268faf216e5ced0e27e977e51d49021cd7570e",
           "version": null
         }
       },
@@ -89,15 +80,6 @@
           "branch": "master",
           "revision": "b365cfb86c24ad31ffbc5690e604dbc98a7417eb",
           "version": null
-        }
-      },
-      {
-        "package": "sql-kit",
-        "repositoryURL": "https://github.com/vapor/sql-kit.git",
-        "state": {
-          "branch": null,
-          "revision": "64c2af0321cd6445982d6873d100cc62e16afcf7",
-          "version": "3.0.0-rc.1.2"
         }
       },
       {

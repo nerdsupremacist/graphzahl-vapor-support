@@ -1,5 +1,5 @@
 
-import LeoQL
+import GraphZahl
 import Vapor
 
 extension RoutesBuilder {

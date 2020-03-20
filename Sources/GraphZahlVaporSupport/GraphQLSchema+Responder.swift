@@ -1,6 +1,6 @@
 
 import Foundation
-import LeoQL
+import GraphZahl
 import Vapor
 
 extension GraphQLSchema {

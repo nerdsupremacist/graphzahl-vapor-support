@@ -1,2 +1,3 @@
-# GraphZahl
-A Framework to implement Declarative GraphQL Server APIs
+# GraphZahl Vapor Support
+
+A set of extensions that allow to use GraphZahl with Vapor
