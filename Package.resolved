@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/vapor/async-kit.git",
         "state": {
           "branch": null,
-          "revision": "094dad1142e4e272a328ab44edd39730f246fb3e",
-          "version": "1.0.0-rc.1"
+          "revision": "42edd5d6b52afc0678f85d4a67aa79e0be79fba5",
+          "version": "1.0.0-beta.2.6"
         }
       },
       {
@@ -24,44 +24,62 @@
         "repositoryURL": "https://github.com/vapor/console-kit.git",
         "state": {
           "branch": null,
-          "revision": "de99d83c9f3c298371002729cc0601e4b5d9e0c9",
-          "version": "4.0.0-rc.1"
+          "revision": "a10418160fd4d2af183b0a754a93373734d6ba80",
+          "version": "4.0.0-beta.2.3"
+        }
+      },
+      {
+        "package": "ContextKit",
+        "repositoryURL": "https://github.com/nerdsupremacist/ContextKit.git",
+        "state": {
+          "branch": null,
+          "revision": "fe6a135c1f58b7115d4f524f1224036a3de0a852",
+          "version": "0.1.0"
         }
       },
       {
         "package": "CRuntime",
         "repositoryURL": "https://github.com/nerdsupremacist/CRuntime.git",
         "state": {
-          "branch": "master",
-          "revision": "1ad0c05e0d2bc83546df2c7883eb33dbc3678d4c",
-          "version": null
+          "branch": null,
+          "revision": "95f911318d8c885f6fc05e971471f94adfd39405",
+          "version": "2.1.2"
         }
       },
       {
         "package": "CwlDemangle",
         "repositoryURL": "https://github.com/mattgallagher/CwlDemangle.git",
         "state": {
-          "branch": "master",
+          "branch": null,
           "revision": "b268c08207d2990664605c49b2c71cbd0df3445b",
-          "version": null
+          "version": "0.1.0"
         }
       },
       {
         "package": "GraphQL",
         "repositoryURL": "https://github.com/nerdsupremacist/GraphQL.git",
         "state": {
-          "branch": "master",
+          "branch": null,
           "revision": "d4213633506dfc766a7d8f343772052b1ecf847d",
-          "version": null
+          "version": "0.12.1-beta.1"
         }
       },
       {
         "package": "GraphZahl",
         "repositoryURL": "https://github.com/nerdsupremacist/GraphZahl.git",
         "state": {
-          "branch": "master",
-          "revision": "86268faf216e5ced0e27e977e51d49021cd7570e",
-          "version": null
+          "branch": null,
+          "revision": "cc2bd5e688bbf56a40cebaaeaa5cb23104b9888e",
+          "version": "0.1.0-alpha.1"
+        }
+      },
+      {
+        "package": "multipart-kit",
+        "repositoryURL": "https://github.com/vapor/multipart-kit.git",
+        "state": {
+          "branch": null,
+          "revision": "b41a49b5756ac3fbf8f2b07228a7e75f9b60731a",
+          "version": "4.0.0-beta.2"
         }
       },
       {
@@ -69,22 +87,22 @@
         "repositoryURL": "https://github.com/vapor/routing-kit.git",
         "state": {
           "branch": null,
-          "revision": "dbc3eafdbe243e9a46eeb6fd7d99266bee52f89f",
-          "version": "4.0.0-rc.1"
+          "revision": "9eccd8152a66db98c188e74242c686971a007211",
+          "version": "4.0.0-beta.3.1"
         }
       },
       {
         "package": "Runtime",
         "repositoryURL": "https://github.com/nerdsupremacist/Runtime.git",
         "state": {
-          "branch": "master",
-          "revision": "b365cfb86c24ad31ffbc5690e604dbc98a7417eb",
-          "version": null
+          "branch": null,
+          "revision": "64c026751ec24bdb69320a31ec933063b7b07cb7",
+          "version": "2.1.2-beta.1"
         }
       },
       {
         "package": "swift-backtrace",
-        "repositoryURL": "https://github.com/swift-server/swift-backtrace.git",
+        "repositoryURL": "https://github.com/ianpartridge/swift-backtrace.git",
         "state": {
           "branch": null,
           "revision": "eaf2cef011c0c23d1701aa60b364def8015dc3c7",
@@ -114,8 +132,8 @@
         "repositoryURL": "https://github.com/apple/swift-metrics.git",
         "state": {
           "branch": null,
-          "revision": "708b960b4605abb20bc55d65abf6bad607252200",
-          "version": "2.0.0"
+          "revision": "09b72f68ed9b01b614c12855fc7e22876b97a97e",
+          "version": "1.2.1"
         }
       },
       {
@@ -141,8 +159,8 @@
         "repositoryURL": "https://github.com/apple/swift-nio-http2.git",
         "state": {
           "branch": null,
-          "revision": "6970de5512cb3b3d094986f0f80e87fe6a1110a0",
-          "version": "1.10.0"
+          "revision": "82eb3fa0974b838358ee46bc6c5381e5ae5de6b9",
+          "version": "1.11.0"
         }
       },
       {
@@ -159,8 +177,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "57398ebf41376c0e4953e661e03b3c01224bea21",
-          "version": "4.0.0-rc.3.5"
+          "revision": "638dc5853bce8d830bb7e8cc12294242f5f9dd84",
+          "version": "4.0.0-beta.4.2"
         }
       },
       {
@@ -168,8 +186,8 @@
         "repositoryURL": "https://github.com/vapor/websocket-kit.git",
         "state": {
           "branch": null,
-          "revision": "aac462481bcd3039d5db9a0fbe7f4e47eefe2295",
-          "version": "2.0.0-rc.1"
+          "revision": "670e757f21cc8f1f76a04baac72f72ea1590e18d",
+          "version": "2.0.0-beta.2.5"
         }
       }
     ]
