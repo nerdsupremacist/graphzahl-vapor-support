@@ -4,6 +4,8 @@
 
 A set of extensions that allow to use [GraphZahl](https://github.com/nerdsupremacist/GraphZahl) with [Vapor](https://vapor.codes).
 
+Warning: For the best results please use. graphzahl-vapor-support with Xcode 11.4 Beta
+
 ## About GraphZahl
 
 GraphZahl is a Framework to implement Declarative, Type-Safe GraphQL Server APIs with Magic 🎩.
