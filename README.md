@@ -13,7 +13,7 @@ Learn more about GraphZahl: [here](https://github.com/nerdsupremacist/GraphZahl)
 ## Installation
 ### Swift Package Manager
 
-You can install GraphZahl via [Swift Package Manager](https://swift.org/package-manager/) by adding the following line to your `Package.swift`:
+You can install graphzahl-vapor-support via [Swift Package Manager](https://swift.org/package-manager/) by adding the following line to your `Package.swift`:
 
 ```swift
 import PackageDescription
