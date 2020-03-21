@@ -2,7 +2,12 @@
 
 # GraphZahl Vapor Support
 
-A set of extensions that allow to use GraphZahl with Vapor
+A set of extensions that allow to use [GraphZahl](https://github.com/nerdsupremacist/GraphZahl) with [Vapor](https://vapor.codes).
+
+## About GraphZahl
+
+GraphZahl is a Framework to implement Declarative, Type-Safe GraphQL Server APIs with Magic 🎩.
+Learn more about GraphZahl: [here](https://github.com/nerdsupremacist/GraphZahl)
 
 ## Installation
 ### Swift Package Manager
