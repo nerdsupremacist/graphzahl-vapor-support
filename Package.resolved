@@ -33,8 +33,8 @@
         "repositoryURL": "https://github.com/nerdsupremacist/ContextKit.git",
         "state": {
           "branch": null,
-          "revision": "fe6a135c1f58b7115d4f524f1224036a3de0a852",
-          "version": "0.1.0"
+          "revision": "792019618a7245ca1bb05e8d2163decd00528927",
+          "version": "0.2.0"
         }
       },
       {
@@ -69,8 +69,8 @@
         "repositoryURL": "https://github.com/nerdsupremacist/GraphZahl.git",
         "state": {
           "branch": null,
-          "revision": "c9fd863c4b9d97d626a79e4574f1515789240bd5",
-          "version": "0.1.0-alpha.1"
+          "revision": "698a67e5375d8af8b68adbe766738617ffc0c473",
+          "version": "0.1.0-alpha.3"
         }
       },
       {
