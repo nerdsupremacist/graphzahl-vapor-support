@@ -13,7 +13,7 @@ let package = Package(
                  targets: ["GraphZahlVaporSupport"]),
     ],
     dependencies: [
-         .package(url: "https://github.com/nerdsupremacist/GraphZahl.git", from: "0.1.0-alpha.3"),
+         .package(url: "https://github.com/nerdsupremacist/GraphZahl.git", from: "0.1.0-alpha.7"),
          .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-beta.4.2"),
     ],
     targets: [
