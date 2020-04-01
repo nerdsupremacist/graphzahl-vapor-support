@@ -47,7 +47,7 @@ private struct SchemaHTTPResponder<S: GraphQLSchema>: Responder {
         let viewerContext = try viewerContextFactory(request)
         let result = viewerContext
             .thenThrowing { viewerContext -> EventLoopFuture<S.Result> in
-                return try S.perform(request: query.query, viewerContext: viewerContext)
+                return try S.perform(request: query.query, viewerContext: viewerContext, variableValues: query.variables ?? [:])
             }
 
         return result.flatMap { $0.encodeResponse(status: .ok, for: request) }
