@@ -4,12 +4,13 @@ import Vapor
 
 extension RoutesBuilder {
 
-    public func graphql<S: GraphQLSchema>(path: [PathComponent],
-                                          use schema: S.Type,
-                                          includeGraphiQL: GraphiQLEnabled = false,
-                                          viewerContext: @escaping (Request) throws -> EventLoopFuture<S.ViewerContext>) {
+    func graphql<S: GraphQLSchema>(path: [PathComponent],
+                                   use schema: S.Type,
+                                   eventLoopGroup: EventLoopGroup?,
+                                   includeGraphiQL: GraphiQLEnabled = false,
+                                   viewerContext: @escaping (Request) throws -> EventLoopFuture<S.ViewerContext>) {
 
-        add(S.route(at: path, viewerContext: viewerContext))
+        add(S.route(at: path, eventLoopGroup: eventLoopGroup, viewerContext: viewerContext))
 
         switch includeGraphiQL {
         case .always:
@@ -24,25 +25,28 @@ extension RoutesBuilder {
 
     public func graphql<S: GraphQLSchema>(path: PathComponent...,
                                           use schema: S.Type,
+                                          eventLoopGroup: EventLoopGroup?,
                                           includeGraphiQL: GraphiQLEnabled = false,
                                           viewerContext: @escaping (Request) throws -> EventLoopFuture<S.ViewerContext>) {
 
-        graphql(path: path, use: schema, includeGraphiQL: includeGraphiQL, viewerContext: viewerContext)
+        graphql(path: path, use: schema, eventLoopGroup: eventLoopGroup, includeGraphiQL: includeGraphiQL, viewerContext: viewerContext)
     }
 
     public func graphql<S: GraphQLSchema>(path: PathComponent...,
                                           use schema: S.Type,
+                                          eventLoopGroup: EventLoopGroup?,
                                           includeGraphiQL: GraphiQLEnabled = false,
                                           viewerContext: @escaping (Request) throws -> S.ViewerContext) {
 
-        graphql(path: path, use: schema, includeGraphiQL: includeGraphiQL) { $0.eventLoop.makeSucceededFuture(try viewerContext($0)) }
+        graphql(path: path, use: schema, eventLoopGroup: eventLoopGroup, includeGraphiQL: includeGraphiQL) { $0.eventLoop.makeSucceededFuture(try viewerContext($0)) }
     }
 
     public func graphql<S: GraphQLSchema>(path: PathComponent...,
                                           use schema: S.Type,
+                                          eventLoopGroup: EventLoopGroup?,
                                           includeGraphiQL: GraphiQLEnabled = false) where S.ViewerContext == Void {
 
-        graphql(path: path, use: schema, includeGraphiQL: includeGraphiQL) { $0.eventLoop.makeSucceededFuture(()) }
+        graphql(path: path, use: schema, eventLoopGroup: eventLoopGroup, includeGraphiQL: includeGraphiQL) { $0.eventLoop.makeSucceededFuture(()) }
     }
 
 }

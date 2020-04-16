@@ -5,12 +5,12 @@ import Vapor
 
 extension GraphQLSchema {
 
-    public static func responder(viewerContext: @escaping (Request) throws -> EventLoopFuture<ViewerContext>) -> Responder {
-        return SchemaHTTPResponder<Self>(viewerContextFactory: viewerContext)
+    public static func responder(eventLoopGroup: EventLoopGroup? = nil, viewerContext: @escaping (Request) throws -> EventLoopFuture<ViewerContext>) -> Responder {
+        return SchemaHTTPResponder<Self>(eventLoopGroup: eventLoopGroup, viewerContextFactory: viewerContext)
     }
 
-    public static func responder(viewerContext: @escaping (Request) throws -> ViewerContext) -> Responder {
-        return responder { $0.eventLoop.future(try viewerContext($0)) }
+    public static func responder(eventLoopGroup: EventLoopGroup? = nil, viewerContext: @escaping (Request) throws -> ViewerContext) -> Responder {
+        return responder(eventLoopGroup: eventLoopGroup) { $0.eventLoop.future(try viewerContext($0)) }
     }
 
 }
@@ -24,6 +24,7 @@ extension GraphQLSchema where ViewerContext == Void {
 }
 
 private struct SchemaHTTPResponder<S: GraphQLSchema>: Responder {
+    let eventLoopGroup: EventLoopGroup?
     let viewerContextFactory: (Request) throws -> EventLoopFuture<S.ViewerContext>
 
     func respond(to request: Request) -> EventLoopFuture<Response> {
@@ -47,7 +48,10 @@ private struct SchemaHTTPResponder<S: GraphQLSchema>: Responder {
         let viewerContext = try viewerContextFactory(request)
         let result = viewerContext
             .thenThrowing { viewerContext -> EventLoopFuture<S.Result> in
-                return try S.perform(request: query.query, viewerContext: viewerContext, variableValues: query.variables ?? [:])
+                return try S.perform(request: query.query,
+                                     viewerContext: viewerContext,
+                                     variableValues: query.variables ?? [:],
+                                     eventLoopGroup: self.eventLoopGroup ?? request.eventLoop)
             }
 
         return result.flatMap { $0.encodeResponse(status: .ok, for: request) }

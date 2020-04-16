@@ -6,33 +6,40 @@ import Vapor
 extension GraphQLSchema {
 
     static func route(at path: [PathComponent],
+                      eventLoopGroup: EventLoopGroup?,
                       viewerContext: @escaping (Request) throws -> EventLoopFuture<ViewerContext>) -> Route {
 
         return Route(method: .POST,
                      path: path,
-                     responder: responder(viewerContext: viewerContext),
+                     responder: responder(eventLoopGroup: eventLoopGroup, viewerContext: viewerContext),
                      requestType: Query.self,
                      responseType: Self.Result.self)
     }
 
-    public static func route(at path: PathComponent...,
-                      viewerContext: @escaping (Request) throws -> EventLoopFuture<ViewerContext>) -> Route {
+    public static func route(
+        at path: PathComponent...,
+        eventLoopGroup: EventLoopGroup? = nil,
+        viewerContext: @escaping (Request) throws -> EventLoopFuture<ViewerContext>
+    ) -> Route {
 
-        return route(at: path, viewerContext: viewerContext)
+        return route(at: path, eventLoopGroup: eventLoopGroup, viewerContext: viewerContext)
     }
 
-    public static func route(at path: PathComponent...,
-                      viewerContext: @escaping (Request) throws -> ViewerContext) -> Route {
+    public static func route(
+        at path: PathComponent...,
+        eventLoopGroup: EventLoopGroup? = nil,
+        viewerContext: @escaping (Request) throws -> ViewerContext
+    ) -> Route {
 
-        return route(at: path) { $0.eventLoop.future(try viewerContext($0)) }
+        return route(at: path, eventLoopGroup: eventLoopGroup) { $0.eventLoop.future(try viewerContext($0)) }
     }
 
 }
 
 extension GraphQLSchema where ViewerContext == Void {
 
-    public static func route(at path: PathComponent...) -> Route {
-        return route(at: path) { $0.eventLoop.future(()) }
+    public static func route(at path: PathComponent..., eventLoopGroup: EventLoopGroup? = nil) -> Route {
+        return route(at: path, eventLoopGroup: eventLoopGroup) { $0.eventLoop.future(()) }
     }
 
 }
