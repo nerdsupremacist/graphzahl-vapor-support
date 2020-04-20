@@ -25,7 +25,7 @@ extension RoutesBuilder {
 
     public func graphql<S: GraphQLSchema>(path: PathComponent...,
                                           use schema: S.Type,
-                                          eventLoopGroup: EventLoopGroup?,
+                                          eventLoopGroup: EventLoopGroup? = nil,
                                           includeGraphiQL: GraphiQLEnabled = false,
                                           viewerContext: @escaping (Request) throws -> EventLoopFuture<S.ViewerContext>) {
 
@@ -34,7 +34,7 @@ extension RoutesBuilder {
 
     public func graphql<S: GraphQLSchema>(path: PathComponent...,
                                           use schema: S.Type,
-                                          eventLoopGroup: EventLoopGroup?,
+                                          eventLoopGroup: EventLoopGroup? = nil,
                                           includeGraphiQL: GraphiQLEnabled = false,
                                           viewerContext: @escaping (Request) throws -> S.ViewerContext) {
 
@@ -43,7 +43,7 @@ extension RoutesBuilder {
 
     public func graphql<S: GraphQLSchema>(path: PathComponent...,
                                           use schema: S.Type,
-                                          eventLoopGroup: EventLoopGroup?,
+                                          eventLoopGroup: EventLoopGroup? = nil,
                                           includeGraphiQL: GraphiQLEnabled = false) where S.ViewerContext == Void {
 
         graphql(path: path, use: schema, eventLoopGroup: eventLoopGroup, includeGraphiQL: includeGraphiQL) { $0.eventLoop.makeSucceededFuture(()) }
