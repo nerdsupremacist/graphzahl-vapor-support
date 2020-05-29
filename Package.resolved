@@ -69,8 +69,8 @@
         "repositoryURL": "https://github.com/nerdsupremacist/GraphZahl.git",
         "state": {
           "branch": null,
-          "revision": "a439ed62e6a1197325a1aac1679ba4f20869e76a",
-          "version": "0.1.0-alpha.24"
+          "revision": "c92029ef017cfb27d485017acd29d7bda1eca849",
+          "version": "0.1.0-alpha.26"
         }
       },
       {
@@ -168,8 +168,8 @@
         "repositoryURL": "https://github.com/vapor/vapor.git",
         "state": {
           "branch": null,
-          "revision": "ad2aeccfbdd1275c0a8817a8024f0b98d65e3880",
-          "version": "4.0.0-rc.3.12"
+          "revision": "6dfdb3445308c40280bf1c071fe14c1c92f98a0d",
+          "version": "4.7.1"
         }
       },
       {

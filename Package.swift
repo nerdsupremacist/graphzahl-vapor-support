@@ -6,15 +6,15 @@ import PackageDescription
 let package = Package(
     name: "graphzahl-vapor-support",
     platforms: [
-       .macOS(.v10_15)
+        .macOS(.v10_15)
     ],
     products: [
         .library(name: "GraphZahlVaporSupport",
                  targets: ["GraphZahlVaporSupport"]),
     ],
     dependencies: [
-         .package(url: "https://github.com/nerdsupremacist/GraphZahl.git", from: "0.1.0-alpha.23"),
-         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-beta.4.2"),
+        .package(url: "https://github.com/nerdsupremacist/GraphZahl.git", from: "0.1.0-alpha.26"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
     ],
     targets: [
         .target(
