@@ -3,7 +3,7 @@ import Foundation
 
 public enum GraphQLIDE {
     case graphiQL
-    case playgroud
+    case playground
 }
 
 public enum GraphQLIDEEnabled {

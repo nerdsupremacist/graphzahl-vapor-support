@@ -106,7 +106,7 @@ extension GraphQLIDE {
               </body>
             </html>
             """
-        case .playgroud:
+        case .playground:
             return """
             <html>
             <head>
