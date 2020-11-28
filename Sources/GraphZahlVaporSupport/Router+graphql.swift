@@ -55,9 +55,7 @@ extension RoutesBuilder {
 
     private func add(ide: GraphQLIDE, at path: [PathComponent]) {
         let joinedPath = path.map { $0.description }.joined(separator: "/")
-        let html = """
-        """
-
+        let html = ide.html(for: joinedPath)
         let response = GraphiQLResponse(html: html)
         get(path) { _ in response }
     }
